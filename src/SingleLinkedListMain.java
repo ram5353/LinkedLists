@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class SingleLinkedListMain {
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
@@ -5,6 +8,7 @@ public class SingleLinkedListMain {
         list.insertInLinkedList(1,0);
         list.insertInLinkedList(2,3);
         list.traverseLinkedList();
+        list.deleteLinkedList();
     }
 }
 

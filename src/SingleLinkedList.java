@@ -67,6 +67,14 @@ public class SingleLinkedList {
         System.out.println("\n");
     }
 
+    void deleteLinkedList() {
+        System.out.println("Deleting liked list");
+        head = null;
+        tail = null;
+    }
+
+
+
     public void removeElements(SingleNode head, int value) {
         SingleNode tempnode = head;
         int i = 0;
