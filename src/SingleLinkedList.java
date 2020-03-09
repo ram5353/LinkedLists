@@ -73,6 +73,23 @@ public class SingleLinkedList {
         tail = null;
     }
 
+    boolean searchNode(int nodeValue) {
+        if (existsLinkedList()) {
+            SingleNode tempnode = head;
+            for (int i = 0; i < getSize(); i++) {
+                if (tempnode.getValue() == nodeValue) {
+                    System.out.println("found at index = " + i);
+                    return true;
+                }
+                tempnode = tempnode.getNext();
+            }
+        } else {
+            System.out.println("Node not found");
+            return false;
+        }
+        return false;
+    }
+
 
 
     public void removeElements(SingleNode head, int value) {

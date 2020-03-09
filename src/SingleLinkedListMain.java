@@ -8,7 +8,7 @@ public class SingleLinkedListMain {
         list.insertInLinkedList(1,0);
         list.insertInLinkedList(2,3);
         list.traverseLinkedList();
-        list.deleteLinkedList();
+        list.searchNode(1);
     }
 }
 
