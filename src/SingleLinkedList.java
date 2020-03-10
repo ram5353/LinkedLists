@@ -90,6 +90,38 @@ public class SingleLinkedList {
         return false;
     }
 
+    public void deletionOfNode(int location) {
+        if (!existsLinkedList()) {
+            System.out.println("LinkedList does not exists");
+        } else if (location == 0) {
+            head = head.getNext();
+            setSize(getSize()-1);
+            if (getSize() == 0) {
+                tail = null;
+            }
+        } else if (location >= 0) {
+            SingleNode tempnode = head;
+            for (int i =0;i<getSize()-1;i++) {
+                tempnode = tempnode.getNext();
+            }
+            if (tempnode == head) {
+                head = tail = null;
+                setSize(getSize()-1);
+            }
+            tempnode.setNext(null);
+            tail = tempnode;
+            setSize(getSize()-1);
+        } else {
+            SingleNode tempnode = head;
+            for (int i=0; i<location-1;i++) {
+                tempnode = tempnode.getNext();
+            }
+            tempnode.setNext(tempnode.getNext().getNext());
+            setSize(getSize()-1);
+        }
+
+    }
+
 
 
     public void removeElements(SingleNode head, int value) {
