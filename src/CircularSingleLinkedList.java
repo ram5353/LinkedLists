@@ -69,6 +69,18 @@ public class CircularSingleLinkedList {
         System.out.println("\n");
     }
 
+    public void deleteCorcularLinkedList() {
+        head = null;
+        if (tail == null) {
+            System.out.println("linked lIst is deleted");
+            return;
+        } else {
+            tail.setNext(null);
+            tail = null;
+            System.out.println("LinkedList is deleted succcessfully");
+        }
+    }
+
     public boolean existsCircularLikedList() {
         return head!= null;
     }
